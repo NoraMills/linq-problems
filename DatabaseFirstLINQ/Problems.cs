@@ -1,49 +1,51 @@
-﻿//using System;
-//using System.Linq;
-//using Microsoft.EntityFrameworkCore;
-//using DatabaseFirstLINQ.Models;
+﻿using System;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using DatabaseFirstLINQ.Models;
 
-//namespace DatabaseFirstLINQ
-//{
-//    class Problems
-//    {
-//        private ECommerceContext _context;
+namespace DatabaseFirstLINQ
+{
+    class Problems
+    {
+        private ECommerceContext _context;
 
-//        public Problems()
-//        {
-//            _context = new ECommerceContext();
-//        }
-//        public void RunLINQQueries()
-//        {
-//            //ProblemOne();
-//            //ProblemTwo();
-//            //ProblemThree();
-//            //ProblemFour();
-//            //ProblemFive();
-//            //ProblemSix();
-//            //ProblemSeven();
-//            //ProblemEight();
-//            //ProblemNine();
-//            //ProblemTen();
-//            //ProblemEleven();
-//            //ProblemTwelve();
-//            //ProblemThirteen();
-//            //ProblemFourteen();
-//            //ProblemFifteen();
-//            //ProblemSixteen();
-//            //ProblemSeventeen();
-//            //ProblemEighteen();
-//            //ProblemNineteen();
-//            //ProblemTwenty();
-//        }
+        public Problems()
+        {
+            _context = new ECommerceContext();
+        }
+        public void RunLINQQueries()
+        {
+            ProblemOne();
+            //            //ProblemTwo();
+            //            //ProblemThree();
+            //            //ProblemFour();
+            //            //ProblemFive();
+            //            //ProblemSix();
+            //            //ProblemSeven();
+            //            //ProblemEight();
+            //            //ProblemNine();
+            //            //ProblemTen();
+            //            //ProblemEleven();
+            //            //ProblemTwelve();
+            //            //ProblemThirteen();
+            //            //ProblemFourteen();
+            //            //ProblemFifteen();
+            //            //ProblemSixteen();
+            //            //ProblemSeventeen();
+            //            //ProblemEighteen();
+            //            //ProblemNineteen();
+            //            //ProblemTwenty();
+            }
 
-//        // <><><><><><><><> R Actions (Read) <><><><><><><><><>
-//        private void ProblemOne()
-//        {
-//            // Write a LINQ query that returns the number of users in the Users table.
-//            // HINT: .ToList().Count
+            // <><><><><><><><> R Actions (Read) <><><><><><><><><>
+            private int ProblemOne()
+            {
+                // Write a LINQ query that returns the number of users in the Users table.
+                // HINT: .ToList().Count
+                var users = _context.Users.ToList().Count;
+                return users;
+            }
 
-//        }
 
 //        private void ProblemTwo()
 //        {
@@ -252,5 +254,5 @@
 
 //        }
 
-//    }
-//}
+  }
+}
