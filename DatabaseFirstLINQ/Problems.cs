@@ -284,6 +284,7 @@ namespace DatabaseFirstLINQ
         {
             // Delete all of the product relationships to the user with the email "oda@gmail.com" in the ShoppingCart table using LINQ.
             // HINT: Loop
+            // Already done.
             var shoppingCartProducts = _context.ShoppingCarts.Where(sc => sc.User.Email == "oda@gmail.com");
             foreach (ShoppingCart userProductRelationship in shoppingCartProducts)
             {
