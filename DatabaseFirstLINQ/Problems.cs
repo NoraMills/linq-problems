@@ -237,6 +237,7 @@ namespace DatabaseFirstLINQ
         private void ProblemFifteen()
         {
             // Update the email of the user we created to "mike@gmail.com"
+            // Already done.
             var user = _context.Users.Where(u => u.Email == "david@gmail.com").SingleOrDefault();
             user.Email = "mike@gmail.com";
             _context.Users.Update(user);
