@@ -174,6 +174,7 @@ namespace DatabaseFirstLINQ
         private void ProblemEleven()
         {
             // Create a new User object and add that user to the Users table using LINQ.
+            // Already done.
             User newUser = new User()
             {
                 Email = "david@gmail.com",
