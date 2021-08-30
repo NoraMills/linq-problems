@@ -217,6 +217,19 @@ namespace DatabaseFirstLINQ
         {
             // Add the product you create to the user we created in the ShoppingCart junction table using LINQ.
 
+            var productId = _context.Products.Where(p => p.Name == "Garden Rake").Select(p => p.Id).SingleOrDefault();
+            var userId = _context.Users.Where(u => u.Email == "david@gmail.com").Select(u => u.Id).SingleOrDefault();
+
+            ShoppingCart newItem = new ShoppingCart()
+            {
+                UserId = userId,
+                ProductId = productId,
+                Quantity = 1
+            };
+
+            _context.ShoppingCarts.Add(newItem);
+            _context.SaveChanges();
+
         }
 
         // <><> U Actions (Update) <><>
